@@ -1,42 +1,45 @@
-name: Deploy to Github Pages
-
 on:
   pull_request:
     branches:
-      -production
+      - production
   push:
     branches:
-      -production
-      -develop
-name: "Build & Release"
+      - production
+      - develop
+
+name: Build & Release
+
 jobs:
   build:
-    name: "Build & Release"
-    runs-on: ubuntu-latest
-    steps: 
+    name: Build & Release
+    runs-on: macos-latest
+
+    steps:
       - name: Checkout code
-      - uses: actions/checkout@v2
-       
-      - name: Set Up Flutter
-      - uses: subosito/flutter-action@v5
-        with:
-          flutter-version: '3.0.5'
+        uses: actions/checkout@v2
       
-      - name: Build Flutter Web
-      - run: flutter pub get
-      - run: flutter build web
-      - name: push to Releases
-        uses: ncipollo/release-action@v2
+      - name: Set up Java
+        uses: actions/setup-java@v2
         with:
-          artifacts: "build/web/*"
+          java-version: '12.x'
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v3
+        with:
+          flutter-version: '2.x' # Adjust to your desired Flutter version
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Run tests
+        run: flutter test
+
+      - name: Build Flutter Web
+        run: flutter build web
+
+      - name: Push to Releases
+        uses: ncipollo/release-action@v1
+        with:
+          files: "build/web/**/*" # Adjust to your build output path
           tag: v1.0.${{ github.run_number }}
           token: ${{ secrets.Token }}
-
-      
-
-
-
-
-
-# push to production, 
-# pull request on production
