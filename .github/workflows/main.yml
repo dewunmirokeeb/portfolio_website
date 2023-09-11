@@ -18,6 +18,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Set up Dart SDK
+        uses: dart-lang/setup-dart@v1  # Use the official Dart setup action
+        with:
+          sdk: '3.0.5' 
+
       - name: Set up Flutter
         uses: subosito/flutter-action@v1
         with:
