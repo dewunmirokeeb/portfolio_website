@@ -37,6 +37,7 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          files: "build/web/**/*" # Adjust to your build output path
+          # files: "build/web/**/*" # Adjust to your build output path
           tag: v1.0.${{ github.run_number }}
           token: ${{ secrets.Token }}
+          publish_dir: build/web
