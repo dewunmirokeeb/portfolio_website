@@ -1,0 +1,12 @@
+
+/* Change the height of the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+    height: 50px;
+    background-color: #8B008B; /* Hexadecimal color code for a shade of purple */
+  }
+  
+  /* Change the color of the scrollbar track */
+  ::-webkit-scrollbar-track {
+    background-color: #A9A9A9; /* Hexadecimal color code for a shade of gray (ashes) */
+  }
+  
