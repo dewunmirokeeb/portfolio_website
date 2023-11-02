@@ -30,19 +30,14 @@ class StyledContainer extends StatelessWidget {
         color: color ?? AppColors.whiteColor,
         boxShadow: const [
           BoxShadow(
-            offset: Offset(5, 5),
+            offset: Offset(-1, 1),
             color: Color.fromARGB(255, 206, 205, 204),
-            blurRadius: 10,
-          ),
-          BoxShadow(
-            offset: Offset(-2, -2),
-            color: Color.fromARGB(255, 206, 205, 204),
-            blurRadius: 10,
+            blurRadius: 2,
           ),
           BoxShadow(
             offset: Offset(1, -1),
             color: Color.fromARGB(255, 206, 205, 204),
-            blurRadius: 10,
+            blurRadius: 2,
           )
         ],
       ),

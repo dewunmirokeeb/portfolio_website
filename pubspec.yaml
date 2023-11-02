@@ -15,14 +15,26 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
+  flutter_launcher_icons: "^0.13.1"
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "asset/images/md_mvu58k_8f8a7fd917d1e96828182cb768f57890fc391e93.jpg"
+  min_sdk_android: 21 # android min sdk min:16, default 21
+  web:
+    generate: true
+    image_path: "asset/images/md_mvu58k_8f8a7fd917d1e96828182cb768f57890fc391e93.jpg"
+    background_color: "#000000"
+    theme_color: "#000000"
 
 flutter:
 
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
+  assets:
+    - asset/images/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -36,7 +48,27 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
+  fonts:
+      - family: Montserrat
+        fonts:
+          - asset: asset/font/Montserrat-Italic-VariableFont_wght.ttf
+          - asset: asset/font/Montserrat-VariableFont_wght.ttf   
+          - asset: asset/font/static/Montserrat-Black.ttf
+          - asset: asset/font/static/Montserrat-BlackItalic.ttf
+          - asset: asset/font/static/Montserrat-Bold.ttf
+          - asset: asset/font/static/Montserrat-BoldItalic.ttf
+          - asset: asset/font/static/Montserrat-ExtraBold.ttf
+          - asset: asset/font/static/Montserrat-ExtraLight.ttf
+          - asset: asset/font/static/Montserrat-ExtraLightItalic.ttf
+          - asset: asset/font/static/Montserrat-Italic.ttf
+          - asset: asset/font/static/Montserrat-Light.ttf
+          - asset: asset/font/static/Montserrat-LightItalic.ttf
+          - asset: asset/font/static/Montserrat-Medium.ttf
+          - asset: asset/font/static/Montserrat-MediumItalic.ttf    
+          - asset: asset/font/static/Montserrat-Regular.ttf
+          - asset: asset/font/static/Montserrat-SemiBold.ttf
+          - asset: asset/font/static/Montserrat-Thin.ttf
+          - asset: asset/font/static/Montserrat-ThinItalic.ttf
   #   - family: Schyler
   #     fonts:
   #       - asset: fonts/Schyler-Regular.ttf

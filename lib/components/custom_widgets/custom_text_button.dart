@@ -5,10 +5,12 @@ class AppTextButton extends StatelessWidget {
   const AppTextButton({
     this.onTap,
     required this.buttonText,
+    this.textColor,
     super.key,
   });
   final Function()? onTap;
   final String buttonText;
+  final Color? textColor;
   @override
   Widget build(BuildContext context) {
     return TextButton(
@@ -28,9 +30,10 @@ class AppTextButton extends StatelessWidget {
       ),
       child: Text(
         buttonText,
-        style: const TextStyle(
+        style: TextStyle(
           fontWeight: FontWeight.w500,
           fontSize: 17,
+          color: textColor,
         ),
       ),
     );
