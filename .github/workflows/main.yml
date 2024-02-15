@@ -40,5 +40,5 @@ jobs:
           folder: build/web
           # files: "build/web/**/*" # Adjust to your build output path
           tag: v1.0.${{ github.run_number }}
-          token: ${{ secrets.Token }}
+          
          
