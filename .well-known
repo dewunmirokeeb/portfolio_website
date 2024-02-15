@@ -1,9 +1,0 @@
-[{
-  "relation": ["delegate_permission/common.handle_all_urls"],
-  "target": {
-    "namespace": "android_app",
-    "package_name": "com.rokeeb.app.simple_instant_app",
-    "sha256_cert_fingerprints":
-    ["58:94:8D:4F:AA:A7:A6:88:25:03:C8:D7:0E:09:3E:8A:AF:F1:54:5D:5D:06:D6:66:E6:CB:52:F7:E1:C8:6E:00"]
-  }
-}]
